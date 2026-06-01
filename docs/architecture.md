@@ -536,6 +536,8 @@ See the Phase 2 document for layer-by-layer scope, directory conventions, the te
 
 ## 10. Deployment
 
+> **Execution scope:** Deployment is **not** part of the Phase 1 scaffolding effort — it is tracked as a separate follow-up task. The full set of deployment decisions and the order-of-operations runbook are consolidated in [`docs/deployment.md`](deployment.md). The subsections below remain the source of truth for the technical decisions themselves.
+
 ### 10.1 Frontend → Vercel
 
 - Deploy the `frontend/` directory directly to Vercel (no Docker).
