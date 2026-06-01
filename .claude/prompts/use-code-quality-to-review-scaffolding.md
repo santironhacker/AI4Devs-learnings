@@ -1,0 +1,1 @@
+Using the sub-agent @.claude/agents/code-quality-guardian.md , revise the @docs/architecture.md and foresee if there are any missing implementation details to consider for a basic user management application that aims to be deployed. List potential improvements to be added for the scaffolding of the project taking into account we are in phase 1.
