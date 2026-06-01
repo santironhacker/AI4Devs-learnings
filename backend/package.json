@@ -5,12 +5,14 @@
   "description": "Express backend (scaffolding only — SAN-11)",
   "scripts": {
     "prisma:validate": "prisma validate",
-    "prisma:migrate:dev": "prisma migrate dev"
+    "prisma:migrate:dev": "prisma migrate dev",
+    "migrate:test": "dotenv -e .env.test -- prisma migrate deploy"
   },
   "dependencies": {
     "@prisma/client": "^5.22.0"
   },
   "devDependencies": {
+    "dotenv-cli": "^11.0.0",
     "prisma": "^5.22.0"
   }
 }

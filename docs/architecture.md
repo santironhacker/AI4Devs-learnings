@@ -506,7 +506,7 @@ This section documents every technology choice and architectural decision extrac
 | Frontend deployment | Vercel (direct, no Docker); `vercel.json` SPA rewrite |
 | Backend deployment | Railway with a non-root multi-stage `Dockerfile` in `backend/` |
 | Database hosting | Railway managed PostgreSQL instance |
-| Migration execution | Single release command `npx prisma migrate deploy && node dist/server.js`; failed migration aborts the release and the previous container keeps serving (Section 10) |
+| Migration execution | Single release command `npx prisma migrate deploy && node dist/server.js`; failed migration aborts the release and the previous container keeps serving (Section 10). Railway injects `DATABASE_URL` into the container at runtime. For local/test runs against the dockerized test DB, use `npm run migrate:test` from `backend/`, which loads `backend/.env.test` via `dotenv-cli` before invoking `prisma migrate deploy` |
 | Container user | Runs as the non-root `node` user (defense-in-depth; the app writes nothing to disk) |
 | Health check | `GET /api/v1/health` with a DB ping; Railway readiness probe (Sections 5.3, 10.6) |
 | Env validation | `zod` schema in `config/env.ts`; fails fast at startup (Section 7.1) |
