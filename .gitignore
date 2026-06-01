@@ -1,0 +1,16 @@
+# Dependencies
+node_modules/
+
+# Environment files (local secrets; .env.example is committed as the template)
+.env
+.env.local
+.env.*.local
+backend/.env
+backend/.env.test
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS
+.DS_Store
