@@ -8,6 +8,9 @@ node_modules/
 backend/.env
 backend/.env.test
 
+# Compiled code
+backend/dist/
+
 # Logs
 *.log
 npm-debug.log*

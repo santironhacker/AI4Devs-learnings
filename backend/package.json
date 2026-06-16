@@ -4,7 +4,8 @@
   "private": true,
   "description": "Express 5 backend — super-users platform (SAN-12)",
   "scripts": {
-    "dev": "tsx watch server.ts",
+    "dev": "dotenv -e .env -- tsx watch server.ts",
+    "dev:test": "dotenv -e .env.test -- tsx watch server.ts",
     "build": "tsc",
     "start": "node dist/server.js",
     "lint": "eslint src server.ts",
